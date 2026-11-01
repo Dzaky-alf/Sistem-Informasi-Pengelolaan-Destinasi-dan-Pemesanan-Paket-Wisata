@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nusa — Jelajahi Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <a href="#" class="brand" data-act="go" data-v="home"><span class="logo">◎</span>Nusa.</a>
+  <button class="burger" data-act="menu" aria-label="Buka menu">☰</button>
+  <nav id="nav">
+    <a href="#" data-act="sec" data-v="destinasi">Destinasi</a>
+    <a href="#" data-act="sec" data-v="paket">Paket Wisata</a>
+    <a href="#" data-act="go" data-v="akun">Pemesanan</a>
+  </nav>
+  <div class="acts">
+    <a href="#" class="plink" data-act="go" data-v="admin">Portal Mitra</a>
+    <button class="pill" data-act="go" data-v="akun">Akun Saya</button>
+  </div>
+</header>
+
+<div id="vHome">
+  <section class="hero">
+    <div class="hero-in">
+      <p class="eyebrow">✦ Jelajahi Indonesia, dengan cara berbeda</p>
+      <h1>Temukan cerita di setiap perjalanan.</h1>
+      <p class="lead">Destinasi pilihan, pemandu lokal tepercaya, dan pengalaman autentik yang kami kurasi khusus untukmu.</p>
+      <form class="search" id="fSearch">
+        <label>Mau ke mana?<input id="sQ" placeholder="Cari destinasi" autocomplete="off"></label>
+        <label>Tanggal<input id="sDate" type="date"></label>
+        <label>Kategori<select id="sCat"><option>Semua</option><option>Bahari</option><option>Budaya</option><option>Alam</option></select></label>
+        <button class="btn">Cari</button>
+      </form>
+    </div>
+    <span class="cap">Nusa Penida, Bali</span>
+  </section>
+
+  <section class="sec" id="destinasi">
+    <p class="label">Paling dicintai pelancong</p>
+    <div class="head"><h2>Destinasi yang memanggil</h2><div class="chips" id="chips"></div></div>
+    <div class="grid" id="destGrid"></div>
+  </section>
+
+  <section class="sec dark" id="paket">
+    <div class="intro">
+      <p class="label gold">Paket terkurasi</p>
+      <h2>Tinggal berangkat.<br>Kami urus sisanya.</h2>
+      <p>Itinerary yang tidak terburu-buru, penginapan berkarakter, dan orang lokal yang tahu tempat terbaik.</p>
+    </div>
+    <div class="pkgs" id="pkgList"></div>
+  </section>
+</div>
+
+<main id="vAcc" hidden>
+  <div class="acc">
+    <div class="who"><span class="av" id="av"></span><div><small>Selamat datang kembali</small><h2 id="accName"></h2></div></div>
+    <div class="acc-grid">
+      <nav class="side-card" id="accNav">
+        <button data-act="tab" data-v="book">Pemesanan saya</button>
+        <button data-act="tab" data-v="rev">Ulasan &amp; rating</button>
+        <button data-act="tab" data-v="prof">Profil &amp; keamanan</button>
+      </nav>
+      <div id="accMain"></div>
+    </div>
+  </div>
+</main>
+
+<div class="adm" id="vAdm" hidden>
+  <aside>
+    <a href="#" class="brand" data-act="go" data-v="home"><span class="logo">◎</span>Nusa.</a>
+    <p class="label mut">Ruang kerja</p>
+    <nav id="admNav"></nav>
+    <div class="me"><small>Masuk sebagai</small><b>Admin Nusa</b><small>Super Admin</small><button class="ghost w" data-act="logout">Keluar dari portal</button></div>
+  </aside>
+  <section class="adm-main">
+    <div class="adm-top"><div><b id="greet"></b><br><small id="today"></small></div><div class="acts"><button class="ghost" data-act="csv">Unduh laporan</button><span class="av sm" id="av2"></span></div></div>
+    <div class="adm-body" id="admBody"></div>
+  </section>
+</div>
+
+<footer class="foot" id="foot">
+  <div><a href="#" class="brand" data-act="go" data-v="home"><span class="logo">◎</span>Nusa.</a><p>Platform perjalanan lokal untuk menjelajahi Indonesia dengan cara yang lebih dekat dan bermakna.</p></div>
+  <small>© <span id="yr"></span> Nusa Wisata. Demo: data tersimpan di browser ini, pembayaran bersifat simulasi.</small>
+</footer>
+
+<div class="modal" id="modal" hidden><div class="box" id="box" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
